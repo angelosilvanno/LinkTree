@@ -15,27 +15,33 @@
   </style>
 </head>
 
-<body class="bg-[#0c0c0c] text-zinc-400 h-screen overflow-hidden flex items-center justify-center p-4 antialiased">
+<!-- BACKGROUND: Deep Navy com gradiente suave para tirar o "preto puro" -->
+<body class="bg-[#0f111a] bg-linear-to-br from-[#0f111a] via-[#13151f] to-[#0f111a] text-zinc-400 h-screen overflow-hidden flex items-center justify-center p-4 antialiased">
 
-  <!-- CARD PRINCIPAL - Corrigido max-w para classe padrão -->
-  <main class="w-full max-w-md bg-[#121212] border border-zinc-800/50 rounded-[3rem] p-8 shadow-2xl flex flex-col gap-6">
+  <!-- ELEMENTOS DE DECORAÇÃO (MESH GRADIENT) - Adiciona profundidade e toque high-tech -->
+  <div class="fixed inset-0 overflow-hidden -z-10">
+    <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-500/10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-cyan-500/10 rounded-full blur-[120px]"></div>
+  </div>
+
+  <!-- CARD PRINCIPAL - Usando backdrop-blur para interagir com o novo fundo -->
+  <main class="w-full max-w-md bg-[#161923]/90 border border-white/5 rounded-[3rem] p-8 shadow-2xl backdrop-blur-xl flex flex-col gap-6">
     
     <!-- HEADER -->
     <header class="flex items-center gap-5">
       <div class="relative">
-        <!-- Corrigido bg-gradient para bg-linear conforme sugestão v4 -->
-        <div class="absolute -inset-1 bg-linear-to-tr from-cyan-500/20 to-transparent rounded-3xl blur-sm"></div>
-        <!-- Corrigido rounded-1.5rem para rounded-3xl -->
+        <!-- Glow sutil atrás da imagem -->
+        <div class="absolute -inset-1 bg-linear-to-tr from-cyan-500/30 to-blue-500/30 rounded-3xl blur-md"></div>
         <img src="./image/angelo.png" alt="Ângelo Silvano" 
-             class="relative w-20 h-20 rounded-3xl object-cover border border-zinc-800 shadow-xl" />
+             class="relative w-20 h-20 rounded-3xl object-cover border border-white/10 shadow-xl" />
       </div>
       <div class="text-left">
         <h1 class="text-2xl font-bold text-white tracking-tight">Ângelo Silvano</h1>
-        <p class="text-[10px] font-bold text-cyan-500 uppercase tracking-widest mt-1">Full Stack Developer</p>
+        <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-widest mt-1">Full Stack Developer</p>
         <div class="flex gap-2 mt-2">
-            <span class="text-[9px] font-medium bg-zinc-800/50 px-2 py-0.5 rounded-md text-zinc-500 border border-zinc-800">React</span>
-            <span class="text-[9px] font-medium bg-zinc-800/50 px-2 py-0.5 rounded-md text-zinc-500 border border-zinc-800">Node.js</span>
-            <span class="text-[9px] font-medium bg-zinc-800/50 px-2 py-0.5 rounded-md text-zinc-500 border border-zinc-800">TS</span>
+            <span class="text-[9px] font-medium bg-white/5 px-2 py-0.5 rounded-md text-zinc-400 border border-white/10">React</span>
+            <span class="text-[9px] font-medium bg-white/5 px-2 py-0.5 rounded-md text-zinc-400 border border-white/10">Node.js</span>
+            <span class="text-[9px] font-medium bg-white/5 px-2 py-0.5 rounded-md text-zinc-400 border border-white/10">TS</span>
         </div>
       </div>
     </header>
@@ -53,54 +59,53 @@
     <!-- GRID DE LINKS -->
     <div class="grid grid-cols-2 gap-3">
       <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" 
-         class="flex flex-col gap-3 bg-zinc-900/50 hover:bg-zinc-800/80 border border-zinc-800/60 p-5 rounded-2xl transition-all group">
+         class="flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/5 p-5 rounded-2xl transition-all group">
         <i class="fab fa-linkedin text-[#0077b5] text-2xl"></i>
         <span class="text-sm font-semibold text-zinc-100 group-hover:text-white">LinkedIn</span>
       </a>
 
       <a href="https://angelosilvanno.vercel.app/" target="_blank" 
-         class="flex flex-col gap-3 bg-zinc-900/50 hover:bg-zinc-800/80 border border-zinc-800/60 p-5 rounded-2xl transition-all group">
+         class="flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/5 p-5 rounded-2xl transition-all group">
         <i class="fas fa-rocket text-[#ff6b00] text-2xl"></i>
         <span class="text-sm font-semibold text-zinc-100 group-hover:text-white">Portfólio</span>
       </a>
 
       <a href="https://github.com/angelosilvanno?tab=repositories" target="_blank" 
-         class="flex flex-col gap-3 bg-zinc-900/50 hover:bg-zinc-800/80 border border-zinc-800/60 p-5 rounded-2xl transition-all group">
+         class="flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/5 p-5 rounded-2xl transition-all group">
         <i class="fas fa-terminal text-[#00ff95] text-2xl"></i>
         <span class="text-sm font-semibold text-zinc-100 group-hover:text-white">Projetos</span>
       </a>
 
       <a href="./curriculo/Curriculo - Angelo Silvano.pdf" target="_blank" 
-         class="flex flex-col gap-3 bg-zinc-900/50 hover:bg-zinc-800/80 border border-zinc-800/60 p-5 rounded-2xl transition-all group">
+         class="flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/5 p-5 rounded-2xl transition-all group">
         <i class="fas fa-file-code text-[#9d50ff] text-2xl"></i>
         <span class="text-sm font-semibold text-zinc-100 group-hover:text-white">Currículo</span>
       </a>
 
       <a href="mailto:angelosilvano.dev@gmail.com" target="_blank" 
-         class="flex flex-col gap-3 bg-zinc-900/50 hover:bg-zinc-800/80 border border-zinc-800/60 p-5 rounded-2xl transition-all group">
+         class="flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/5 p-5 rounded-2xl transition-all group">
         <i class="fas fa-envelope text-[#ff3e3e] text-2xl"></i>
         <span class="text-sm font-semibold text-zinc-100 group-hover:text-white">E-mail</span>
       </a>
 
       <a href="https://angelosilvanno.vercel.app/#skills" target="_blank" 
-         class="flex flex-col gap-3 bg-zinc-900/50 hover:bg-zinc-800/80 border border-zinc-800/60 p-5 rounded-2xl transition-all group">
+         class="flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/5 p-5 rounded-2xl transition-all group">
         <i class="fas fa-layer-group text-[#ffcc00] text-2xl"></i>
         <span class="text-sm font-semibold text-zinc-100 group-hover:text-white">Stack</span>
       </a>
     </div>
 
     <!-- FOOTER -->
-    <div class="flex items-center justify-between pt-2 border-t border-zinc-800/40">
+    <div class="flex items-center justify-between pt-2 border-t border-white/10">
       <div class="flex gap-4">
-        <a href="https://www.instagram.com/angelosilvanno/" target="_blank" class="text-zinc-600 hover:text-zinc-400 transition-colors">
+        <a href="https://www.instagram.com/angelosilvanno/" target="_blank" class="text-zinc-600 hover:text-white transition-colors">
           <i class="fab fa-instagram text-lg"></i>
         </a>
-        <a href="https://www.facebook.com/angelosilvanno/" target="_blank" class="text-zinc-600 hover:text-zinc-400 transition-colors">
+        <a href="https://www.facebook.com/angelosilvanno/" target="_blank" class="text-zinc-600 hover:text-white transition-colors">
           <i class="fab fa-facebook text-lg"></i>
         </a>
       </div>
-      <!-- Corrigido tracking-0.1em para tracking-widest -->
-      <footer class="text-[10px] uppercase tracking-widest text-zinc-700 font-bold">
+      <footer class="text-[10px] uppercase tracking-widest text-zinc-600 font-bold">
         © <span id="ano-atual"></span> Angelo Silvano
       </footer>
     </div>
